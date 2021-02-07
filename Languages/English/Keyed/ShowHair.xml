@@ -2,6 +2,8 @@
 <LanguageData>
 	<ShowHair.ShowHair>Show Hair</ShowHair.ShowHair>
 	<ShowHair.HideAllHats>Hide All Hats</ShowHair.HideAllHats>
+	<ShowHair.NoClipMode>No Clip Mode</ShowHair.NoClipMode>
+	<ShowHair.UseFallbackTexture>Use Fallback Texture</ShowHair.UseFallbackTexture>
 	<ShowHair.SelectHatsWhichHideHair>Select hats that will hide hair</ShowHair.SelectHatsWhichHideHair>
 	<ShowHair.SelectHairThatWillBeHidden>Select hair that hats will hide</ShowHair.SelectHairThatWillBeHidden>
 	<ShowHair.ShowHatsOnlyWhenDrafted>Show Hats Only When Drafted</ShowHair.ShowHatsOnlyWhenDrafted>

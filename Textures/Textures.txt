@@ -1,0 +1,17 @@
+Add custom textures here.
+
+The mod places texture sets called "FullHead" and "UpperHead" within a folder structure equal to the hair's texPath, e.g. the textures for the vanilla Afro would be placed in `Things/Pawn/Humanlike/Hairs/Afro/`. The mod automatically detects properly placed and named textures, and will switch to the FullHead/UpperHead texture if the respective BodyPartGroup is covered. If a texture can't be found it will default to Shaved hair, meaning vanilla style hiding of hair.
+
+To make a hair mod compatible:
+
+    Make a folder next to your png files and name it the same as the hairstyle, like ABC_front.png means the folder should be named ABC
+    Inside that folder you add Bodypart + _front, _back, _side, like FullHead_front.png
+    Valid bodyparts are FullHead, UpperHead and Jaw, making a total of 9 if all are used
+
+
+Current hairstyles mods with custom textures(load mods before this one):
+- vanilla (default) hairstyles,
+- Rimsenal Hair Pack,
+- Spoons Hair Mod,
+- Nackblad Inc Rimhair (both old and new).
+- Vanilla Hair Expanded (from Naiyasfury)

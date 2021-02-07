@@ -76,6 +76,15 @@ namespace ShowHair
             Widgets.CheckboxLabeled(new Rect(0, y, 250, 22), "ShowHair.HideAllHats".Translate(), ref Settings.HideAllHats);
             y += 30;
 
+            //gaberad: DontShaveYourHead settings
+            Widgets.CheckboxLabeled(new Rect(0, y, 250, 22), "ShowHair.NoClipMode".Translate(), ref Settings.NoClipMode);
+            y += 30;
+            if (Settings.NoClipMode)
+            {
+                Widgets.CheckboxLabeled(new Rect(10, y, 250, 22), "ShowHair.UseFallbackTexture".Translate(), ref Settings.UseFallbackTexture);
+                y += 30;
+            }
+
             if (!Settings.HideAllHats)
             {
                 Widgets.CheckboxLabeled(new Rect(0, y, 250, 22), "ShowHair.ShowHatsOnlyWhenDrafted".Translate(), ref Settings.ShowHatsOnlyWhenDrafted);
@@ -230,6 +239,10 @@ namespace ShowHair
         public override void WriteSettings()
         {
             base.WriteSettings();
+
+            //gaberad: re-initialize the HairUtility when settings are written, in case UseFallbackTexture has changed
+            Patch_PawnRenderer_RenderPawnInternal.HairUtility = new ShowHair.NoClipMode.HairUtility(Settings.UseFallbackTexture);
+
             Settings.OptionsOpen = false;
             if (this.pawn != null)
             {
@@ -331,6 +344,8 @@ namespace ShowHair
     {
         public static bool OnlyApplyToColonists = false;
         public static bool HideAllHats = false;
+        public static bool NoClipMode = false;
+        public static bool UseFallbackTexture = true;
         public static bool ShowHatsOnlyWhenDrafted = false;
         public static bool HideHatsIndoors = false;
         public static bool ShowHatsWhenDraftedIndoors = false;
@@ -364,6 +379,8 @@ namespace ShowHair
             Scribe_Collections.Look(ref hairToHide, "HairToHide", LookMode.Value);
             Scribe_Collections.Look(ref hatsThatHide, "HatsThatHide", LookMode.Value);
             Scribe_Values.Look<bool>(ref HideAllHats, "HideAllHats", false, false);
+            Scribe_Values.Look<bool>(ref NoClipMode, "NoClipMode", false, false);
+            Scribe_Values.Look<bool>(ref UseFallbackTexture, "UseFallbackTexture", true, false);
             Scribe_Values.Look<bool>(ref OnlyApplyToColonists, "OnlyApplyToColonists", false, false);
             Scribe_Values.Look<bool>(ref ShowHatsOnlyWhenDrafted, "ShowHatsOnlyWhenDrafted", false, false);
             Scribe_Values.Look<bool>(ref ShowHatsWhenDraftedIndoors, "ShowHatsWhenDraftedIndoors", false, false);
