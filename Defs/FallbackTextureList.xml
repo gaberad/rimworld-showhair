@@ -16,7 +16,7 @@
 		if the bottom pixel of the texture is 12% above the bottom, then it's FallbackTextures_Long
 	-->
 	
-	<DontShaveYourHead.FallbackTextureListDef>
+	<ShowHair.NoClipMode.FallbackTextureListDef>
 		<defName>FallbackTextures_Short</defName>
 		<bottomPixelRange>
 			<start>100</start>
@@ -32,9 +32,9 @@
 			<li>Hair/nbi_jeffy</li>
 			<li>Hair/nbi_jack</li>	
 		</texturePathList>
-	</DontShaveYourHead.FallbackTextureListDef>	
+	</ShowHair.NoClipMode.FallbackTextureListDef>	
 	
-	<DontShaveYourHead.FallbackTextureListDef>
+	<ShowHair.NoClipMode.FallbackTextureListDef>
 		<defName>FallbackTextures_Medium</defName>
 		<bottomPixelRange>
 			<start>35</start>
@@ -52,9 +52,9 @@
 			<li>Things/Pawn/Humanlike/Hairs/Curly</li>	
 			<li>Hairs/LittleBird</li>	
 		</texturePathList>
-	</DontShaveYourHead.FallbackTextureListDef>	
+	</ShowHair.NoClipMode.FallbackTextureListDef>	
 	
-	<DontShaveYourHead.FallbackTextureListDef>
+	<ShowHair.NoClipMode.FallbackTextureListDef>
 		<defName>FallbackTextures_Long</defName>
 		<bottomPixelRange>
 			<start>19</start>
@@ -72,5 +72,5 @@
 			<li>Hair/nbi_sandi</li>	
 			<li>Hair/nbi_witch</li>	
 		</texturePathList>
-	</DontShaveYourHead.FallbackTextureListDef>	
+	</ShowHair.NoClipMode.FallbackTextureListDef>	
 </Defs>
