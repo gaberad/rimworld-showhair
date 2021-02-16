@@ -23,7 +23,7 @@ namespace ShowHair.NoClipMode
 			this.headCoverages = new Dictionary<bool, IHeadCoverage>()
 			{
 				{ false, new HeadCoverage.NotCovered() },
-				{ true, useFallbackTextures ? (IHeadCoverage)new HeadCoverage.Covered() : (IHeadCoverage)new HeadCoverage.Covered_Fallback() }
+				{ true, useFallbackTextures ? (IHeadCoverage)new HeadCoverage.Covered_Fallback() : (IHeadCoverage)new HeadCoverage.Covered() }
 			};
 		}
 

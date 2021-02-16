@@ -82,7 +82,7 @@ namespace ShowHair.NoClipMode
 						int bottomPixel = TextureUtility.GetBottomPixelPercentage(pawn, texPath, Rot4.East);
 
 						//get the fallback textures for the pixel range
-						var textures = this.fallbackTexturesList.Where(ft => bottomPixel >= ft.bottomPixelRange.start && bottomPixel <= ft.bottomPixelRange.end).FirstOrDefault();
+						var textures = this.fallbackTexturesList.Where(ft => bottomPixel >= ft.bottomPixelRange.end && bottomPixel <= ft.bottomPixelRange.start).FirstOrDefault();
 
 						string closestFallbackPath = textures.GetClostestFallbackTexturePath(texPath);
 
